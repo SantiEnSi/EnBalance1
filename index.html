@@ -764,6 +764,9 @@
         .form-group textarea { resize: vertical; min-height: 100px; }
 
         /* FOOTER */
+        /* Fix: labels heredan color del contenedor */
+        label { color: inherit; }
+
         footer {
             background: var(--verde-oscuro);
             color: rgba(255,255,255,0.6);
@@ -795,10 +798,8 @@
 <body>
 
     <nav>
-<div class="logo" onclick="navigateTo('inicio')">
-    <img src="EnBalance.png" alt="logo" style="height:32px; vertical-align:middle; margin-right:8px;">
-    En<span>Balance</span>
-</div>        <ul>
+        <div class="logo" onclick="navigateTo('inicio')">En<span>Balance</span></div>
+        <ul>
             <li><a onclick="navigateTo('inicio')" id="link-inicio" class="active">Inicio</a></li>
             <li><a onclick="navigateTo('nosotros')" id="link-nosotros">Nosotros</a></li>
             <li><a onclick="navigateTo('blog')" id="link-blog">Blog</a></li>
@@ -1015,8 +1016,8 @@
                 </div>
                 <div class="valor-card">
                     <div style="font-size:1.8rem;">🇨🇴</div>
-                    <h3>Contexto latino</h3>
-                    <p>Hablamos de salario mínimo, de cesantías, de AFC, de lo que vive la gente real en Latinoamerica.</p>
+                    <h3>Contexto colombiano</h3>
+                    <p>Hablamos de salario mínimo, de cesantías, de AFC, de lo que vive la gente real en Colombia.</p>
                 </div>
             </div>
         </div>
@@ -1042,15 +1043,15 @@
         </div>
 
         <div class="blog-grid">
-            <div class="blog-card">
+            <div class="blog-card" onclick="mostrarArticulo('art-regla502030')" style="cursor:pointer;">
                 <div class="blog-card-img verde">💸</div>
                 <div class="blog-card-body">
                     <span class="blog-tag">Presupuesto</span>
                     <h3>Cómo aplicar la regla 50-30-20 con salario mínimo</h3>
-                    <p>¿Es posible ahorrar ganando un salario mínimo? Sí. Te mostramos cómo hacerlo sin dejar de vivir.</p>
+                    <p>¿Es posible ahorrar ganando $1.300.000? Sí. Te mostramos cómo hacerlo sin dejar de vivir.</p>
                 </div>
                 <div class="blog-card-footer">
-                    <span>📖 5 min de lectura</span>
+                    <span>📖 7 min de lectura</span>
                     <span>Presupuesto</span>
                 </div>
             </div>
@@ -1127,6 +1128,213 @@
         </footer>
     </section>
 
+    <!-- ===== ARTÍCULO: Regla 50-30-20 (dentro del blog) ===== -->
+    <section id="art-regla502030" class="page">
+        <div style="padding-top:72px; background:var(--crema); min-height:100vh;">
+
+            <div style="padding: 28px 8% 0;">
+                <button onclick="navigateTo('blog')"
+                    style="background:transparent; border:1.5px solid var(--verde); color:var(--verde);
+                           padding:8px 20px; border-radius:50px; cursor:pointer; font-family:'DM Sans',sans-serif;
+                           font-size:0.85rem; font-weight:600; transition:all 0.2s;"
+                    onmouseover="this.style.background='var(--verde)';this.style.color='white';"
+                    onmouseout="this.style.background='transparent';this.style.color='var(--verde)';">
+                    ← Volver al blog
+                </button>
+            </div>
+
+            <article style="max-width:760px; margin:0 auto; padding:40px 8% 80px;">
+
+                <span class="blog-tag">Presupuesto</span>
+                <h1 style="font-family:'DM Serif Display',serif; font-size:2.4rem; line-height:1.2;
+                           color:var(--texto); margin:16px 0 12px;">
+                    La regla 50-30-20 con salario mínimo: sí se puede ahorrar
+                </h1>
+                <p style="color:var(--texto-suave); font-size:0.88rem; margin-bottom:32px;">
+                    📅 Abril 2026 &nbsp;·&nbsp; 📖 7 min de lectura &nbsp;·&nbsp; Finanzas para Todos
+                </p>
+
+                <p style="font-size:1.05rem; color:var(--texto-suave); line-height:1.85; margin-bottom:20px;">
+                    Te explicamos, sin tecnicismos, cómo organizar tu plata cada mes usando una de las reglas más sencillas
+                    del mundo de las finanzas — y los hábitos para que sí te funcione.
+                </p>
+                <p style="font-size:1rem; color:var(--texto-suave); line-height:1.85; margin-bottom:32px;">
+                    ¿Alguna vez llegaste a fin de mes sin saber en qué se fue todo tu sueldo? No estás solo o sola.
+                    La buena noticia es que no necesitas ser un experto para ordenar tus finanzas. Con una regla
+                    súper sencilla puedes empezar hoy mismo.
+                </p>
+
+                <h2 style="font-family:'DM Serif Display',serif; font-size:1.7rem; color:var(--texto); margin-bottom:14px;">
+                    ¿Qué es la regla 50-30-20?
+                </h2>
+                <p style="font-size:1rem; color:var(--texto-suave); line-height:1.85; margin-bottom:32px;">
+                    Es una forma de dividir tu salario en tres grandes "cajitas" cada vez que te pagan. Nada más.
+                    No hay fórmulas complicadas, solo tres números: 50, 30 y 20. La idea es que cuando llegue tu sueldo,
+                    en vez de gastarlo sin orden, lo dividas así: la mitad para lo que necesitas, casi un tercio para
+                    lo que disfrutas, y una quinta parte para tu futuro.
+                </p>
+
+                <h2 style="font-family:'DM Serif Display',serif; font-size:1.7rem; color:var(--texto); margin-bottom:14px;">
+                    ¿Cuánto es el salario mínimo en 2026?
+                </h2>
+                <p style="font-size:1rem; color:var(--texto-suave); line-height:1.85; margin-bottom:24px;">
+                    En Colombia, el salario mínimo mensual vigente para 2026 es de <strong>$1.750.905</strong>.
+                    Vamos a trabajar con ese valor base para hacer los cálculos.
+                </p>
+
+                <!-- Tarjetas 50-30-20 — FIX: colores de texto explícitos -->
+                <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:40px;">
+                    <div style="background:var(--verde-oscuro); border-radius:16px; padding:24px; text-align:center; color:#ffffff;">
+                        <div style="font-family:'DM Serif Display',serif; font-size:2.5rem; color:var(--acento);">50%</div>
+                        <div style="font-weight:600; margin:6px 0 4px; color:#ffffff !important;">Necesidades</div>
+                        <div style="font-size:1.2rem; font-weight:700; color:#ffffff !important;">$875.453</div>
+                        <div style="font-size:0.78rem; color:rgba(255,255,255,0.75); margin-top:4px;">Lo que no puedes dejar de pagar</div>
+                    </div>
+                    <div style="background:var(--acento); border-radius:16px; padding:24px; text-align:center;">
+                        <div style="font-family:'DM Serif Display',serif; font-size:2.5rem; color:var(--verde-oscuro);">30%</div>
+                        <div style="font-weight:600; margin:6px 0 4px; color:var(--verde-oscuro);">Gustos</div>
+                        <div style="font-size:1.2rem; font-weight:700; color:var(--verde-oscuro);">$525.271</div>
+                        <div style="font-size:0.78rem; color:rgba(15,79,47,0.75); margin-top:4px;">Lo que disfrutas y te da calidad de vida</div>
+                    </div>
+                    <div style="background:var(--crema-oscuro); border-radius:16px; padding:24px; text-align:center;">
+                        <div style="font-family:'DM Serif Display',serif; font-size:2.5rem; color:var(--verde);">20%</div>
+                        <div style="font-weight:600; margin:6px 0 4px; color:var(--texto);">Futuro</div>
+                        <div style="font-size:1.2rem; font-weight:700; color:var(--texto);">$350.181</div>
+                        <div style="font-size:0.78rem; color:var(--texto-suave); margin-top:4px;">Tu ahorro o pago de deudas</div>
+                    </div>
+                </div>
+
+                <h2 style="font-family:'DM Serif Display',serif; font-size:1.7rem; color:var(--texto); margin-bottom:20px;">
+                    ¿Qué va en cada cajita?
+                </h2>
+
+                <div style="background:white; border-radius:14px; padding:24px 28px; margin-bottom:16px; border-left:4px solid var(--verde);">
+                    <h3 style="font-size:1rem; font-weight:700; margin-bottom:12px; color:var(--verde);">🏠 Necesidades · $875.453</h3>
+                    <ul style="list-style:none; display:flex; flex-direction:column; gap:8px;">
+                        <li style="font-size:0.92rem; color:var(--texto-suave);">→ Arriendo o cuota de la casa</li>
+                        <li style="font-size:0.92rem; color:var(--texto-suave);">→ Servicios públicos (agua, luz, gas, internet)</li>
+                        <li style="font-size:0.92rem; color:var(--texto-suave);">→ Mercado y alimentación</li>
+                        <li style="font-size:0.92rem; color:var(--texto-suave);">→ Transporte para ir al trabajo</li>
+                        <li style="font-size:0.92rem; color:var(--texto-suave);">→ Salud y medicamentos esenciales</li>
+                    </ul>
+                </div>
+
+                <div style="background:white; border-radius:14px; padding:24px 28px; margin-bottom:16px; border-left:4px solid var(--acento);">
+                    <h3 style="font-size:1rem; font-weight:700; margin-bottom:12px; color:#b8960a;">🎉 Gustos · $525.271</h3>
+                    <ul style="list-style:none; display:flex; flex-direction:column; gap:8px;">
+                        <li style="font-size:0.92rem; color:var(--texto-suave);">→ Salidas a comer o cine con la familia</li>
+                        <li style="font-size:0.92rem; color:var(--texto-suave);">→ Ropa o accesorios que no son urgentes</li>
+                        <li style="font-size:0.92rem; color:var(--texto-suave);">→ Suscripciones (Netflix, Spotify, etc.)</li>
+                        <li style="font-size:0.92rem; color:var(--texto-suave);">→ Hobbies y actividades de ocio</li>
+                        <li style="font-size:0.92rem; color:var(--texto-suave);">→ Detalles o regalos a personas queridas</li>
+                    </ul>
+                </div>
+
+                <div style="background:white; border-radius:14px; padding:24px 28px; margin-bottom:40px; border-left:4px solid #74b9a0;">
+                    <h3 style="font-size:1rem; font-weight:700; margin-bottom:12px; color:#2d8c6a;">🌱 Futuro · $350.181</h3>
+                    <ul style="list-style:none; display:flex; flex-direction:column; gap:8px;">
+                        <li style="font-size:0.92rem; color:var(--texto-suave);">→ Fondo de emergencias (meta: 3 meses de gastos)</li>
+                        <li style="font-size:0.92rem; color:var(--texto-suave);">→ Ahorro para una meta (viaje, electrodoméstico, estudio)</li>
+                        <li style="font-size:0.92rem; color:var(--texto-suave);">→ Pago extra a deudas para salir más rápido de ellas</li>
+                        <li style="font-size:0.92rem; color:var(--texto-suave);">→ Inversión pequeña (CDT, fondos de inversión, etc.)</li>
+                    </ul>
+                </div>
+
+                <h2 style="font-family:'DM Serif Display',serif; font-size:1.7rem; color:var(--texto); margin-bottom:20px;">
+                    Los errores más comunes (y cómo evitarlos)
+                </h2>
+                <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:40px;">
+                    <div style="background:white; border-radius:12px; padding:20px 24px; display:flex; gap:16px; align-items:flex-start;">
+                        <span style="font-size:1.4rem;">😤</span>
+                        <div>
+                            <strong style="font-size:0.95rem; color:var(--texto);">Querer ser perfecto desde el día uno</strong>
+                            <p style="font-size:0.88rem; color:var(--texto-suave); margin-top:4px; line-height:1.7;">Si en enero no lograste el 50-30-20 exacto, no abandones. El objetivo es mejorar mes a mes, no ser perfecto de entrada.</p>
+                        </div>
+                    </div>
+                    <div style="background:white; border-radius:12px; padding:20px 24px; display:flex; gap:16px; align-items:flex-start;">
+                        <span style="font-size:1.4rem;">🤔</span>
+                        <div>
+                            <strong style="font-size:0.95rem; color:var(--texto);">Mezclar los "gustos" con las "necesidades"</strong>
+                            <p style="font-size:0.88rem; color:var(--texto-suave); margin-top:4px; line-height:1.7;">El café diario en la tienda de la esquina es un gusto, no una necesidad. Ser honesto con esto es clave para que los números cuadren.</p>
+                        </div>
+                    </div>
+                    <div style="background:white; border-radius:12px; padding:20px 24px; display:flex; gap:16px; align-items:flex-start;">
+                        <span style="font-size:1.4rem;">💸</span>
+                        <div>
+                            <strong style="font-size:0.95rem; color:var(--texto);">Tocar el ahorro para gastos del día a día</strong>
+                            <p style="font-size:0.88rem; color:var(--texto-suave); margin-top:4px; line-height:1.7;">El 20% es intocable salvo emergencia real. Si lo usas para ropa o salidas, nunca construirás el colchón que te da tranquilidad.</p>
+                        </div>
+                    </div>
+                    <div style="background:white; border-radius:12px; padding:20px 24px; display:flex; gap:16px; align-items:flex-start;">
+                        <span style="font-size:1.4rem;">🚨</span>
+                        <div>
+                            <strong style="font-size:0.95rem; color:var(--texto);">No tener en cuenta los gastos imprevistos</strong>
+                            <p style="font-size:0.88rem; color:var(--texto-suave); margin-top:4px; line-height:1.7;">El médico, el arreglo del celular, el mercado extra. Estos gastos existen. Parte del fondo de emergencias es precisamente para no desbaratar el plan cuando aparecen.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lista de arranque — FIX: texto explícito en blanco -->
+                <h2 style="font-family:'DM Serif Display',serif; font-size:1.7rem; color:var(--texto); margin-bottom:16px;">
+                    Tu lista de arranque para esta semana
+                </h2>
+                <div style="background:var(--verde-oscuro); border-radius:16px; padding:28px 32px; margin-bottom:40px; color:#ffffff;">
+                    <div style="display:flex; flex-direction:column; gap:14px;">
+                        <label style="display:flex; align-items:flex-start; gap:12px; cursor:pointer; color:#ffffff;">
+                            <input type="checkbox" style="margin-top:3px; accent-color:var(--acento); width:16px; height:16px; flex-shrink:0;">
+                            <span style="font-size:0.92rem; line-height:1.6; color:#ffffff;">Anota todos tus gastos fijos del mes (arriendo, servicios, transporte)</span>
+                        </label>
+                        <label style="display:flex; align-items:flex-start; gap:12px; cursor:pointer; color:#ffffff;">
+                            <input type="checkbox" style="margin-top:3px; accent-color:var(--acento); width:16px; height:16px; flex-shrink:0;">
+                            <span style="font-size:0.92rem; line-height:1.6; color:#ffffff;">Calcula cuánto corresponde al 50%, 30% y 20% de tu salario</span>
+                        </label>
+                        <label style="display:flex; align-items:flex-start; gap:12px; cursor:pointer; color:#ffffff;">
+                            <input type="checkbox" style="margin-top:3px; accent-color:var(--acento); width:16px; height:16px; flex-shrink:0;">
+                            <span style="font-size:0.92rem; line-height:1.6; color:#ffffff;">Abre una cuenta de ahorros separada si aún no tienes una</span>
+                        </label>
+                        <label style="display:flex; align-items:flex-start; gap:12px; cursor:pointer; color:#ffffff;">
+                            <input type="checkbox" style="margin-top:3px; accent-color:var(--acento); width:16px; height:16px; flex-shrink:0;">
+                            <span style="font-size:0.92rem; line-height:1.6; color:#ffffff;">Define una meta de ahorro con nombre y valor ("fondo de emergencias: $500.000")</span>
+                        </label>
+                        <label style="display:flex; align-items:flex-start; gap:12px; cursor:pointer; color:#ffffff;">
+                            <input type="checkbox" style="margin-top:3px; accent-color:var(--acento); width:16px; height:16px; flex-shrink:0;">
+                            <span style="font-size:0.92rem; line-height:1.6; color:#ffffff;">Registra tus gastos diarios — un cuaderno o una app gratuita funcionan</span>
+                        </label>
+                        <label style="display:flex; align-items:flex-start; gap:12px; cursor:pointer; color:#ffffff;">
+                            <input type="checkbox" style="margin-top:3px; accent-color:var(--acento); width:16px; height:16px; flex-shrink:0;">
+                            <span style="font-size:0.92rem; line-height:1.6; color:#ffffff;">Comparte este artículo con alguien que también quiera ordenar sus finanzas</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div style="background:rgba(245,200,66,0.15); border:1.5px solid var(--acento); border-radius:14px; padding:24px 28px; margin-bottom:40px;">
+                    <div style="font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#b8960a; margin-bottom:8px;">💡 Consejo práctico</div>
+                    <p style="font-size:0.95rem; color:var(--texto); line-height:1.8;">
+                        No tienes que aplicar todos los hábitos de golpe. Empieza con uno solo durante el primer mes.
+                        El más fácil es anotar tus gastos durante 30 días sin cambiar nada. Solo observa.
+                        Eso ya transforma la forma en que ves tu plata.
+                    </p>
+                </div>
+
+                <div style="text-align:center; padding:40px 0 20px;">
+                    <h2 style="font-family:'DM Serif Display',serif; font-size:1.9rem; color:var(--verde); margin-bottom:12px;">
+                        Empieza con lo que tienes. Empieza hoy.
+                    </h2>
+                    <p style="font-size:1rem; color:var(--texto-suave); line-height:1.8; max-width:500px; margin:0 auto 28px;">
+                        La regla 50-30-20 no es magia. Es simplemente un orden. Y el orden, cuando se vuelve hábito, cambia todo.
+                    </p>
+                    <button onclick="navigateTo('blog')" class="btn btn-primary">Ver más artículos →</button>
+                </div>
+
+            </article>
+        </div>
+
+        <footer>
+            <div class="logo">En<span style="color:var(--acento)">Balance</span></div>
+            <p>&copy; 2025 EnBalance · Finanzas para todos los colombianos</p>
+        </footer>
+    </section>
+
     <!-- ===== CONTACTO ===== -->
     <section id="contacto" class="page">
         <div class="contacto-hero">
@@ -1141,11 +1349,11 @@
                 <p>No importa si tu pregunta parece básica. En EnBalance creemos que no hay preguntas tontas cuando se trata de tu dinero.</p>
                 <div class="contacto-dato">
                     <div class="contacto-dato-icono">📧</div>
-                    <span>enbalancebysb@gmail.com</span>
+                    <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b7dfd8dbd6f7d2d9d5d6dbd6d9d4d299d4d8">[email&#160;protected]</a></span>
                 </div>
                 <div class="contacto-dato">
                     <div class="contacto-dato-icono">📍</div>
-                    <span>Colombia · Respondemos en máximo 24h</span>
+                    <span>Colombia · Respondemos en 24h</span>
                 </div>
                 <div class="contacto-dato">
                     <div class="contacto-dato-icono">💬</div>
@@ -1190,13 +1398,23 @@
         </footer>
     </section>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         function navigateTo(pageId) {
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
             document.querySelectorAll('nav ul li a').forEach(a => a.classList.remove('active'));
             document.getElementById(pageId).classList.add('active');
             const link = document.getElementById('link-' + pageId);
             if (link) link.classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        // Abre un artículo (mantiene el link "Blog" activo en el nav)
+        function mostrarArticulo(artId) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('nav ul li a').forEach(a => a.classList.remove('active'));
+            document.getElementById(artId).classList.add('active');
+            const blogLink = document.getElementById('link-blog');
+            if (blogLink) blogLink.classList.add('active');
             window.scrollTo(0, 0);
         }
 
@@ -1207,10 +1425,4 @@
         function actualizarCalc(val) {
             val = parseInt(val);
             document.getElementById('calc-display').textContent = formatCOP(val);
-            document.getElementById('calc-nec').textContent = formatCOP(val * 0.5);
-            document.getElementById('calc-aho').textContent = formatCOP(val * 0.2);
-            document.getElementById('calc-gus').textContent = formatCOP(val * 0.3);
-        }
-    </script>
-</body>
-</html>
+            document.getElementById('calc-nec').textContent = fo
